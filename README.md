@@ -1,6 +1,6 @@
 # coiannot
 
-Assign taxonomy to cox1 sequences using blast searches and empirically defined thresholds. Used in `https://github.com/miferg/coiner`
+Assign taxonomy to cox1 sequences using blast searches and empirically defined thresholds. Recommended use after `https://github.com/miferg/coiner`
 
 After passing e-value and query coverage filters, for each rank, the identity percentage of blast alignment will define up to which rank annotation will be inherited from the subject sequence.
 
