@@ -1,4 +1,4 @@
-# blastcoi
+# coiannot
 
 Assign taxonomy to cox1 sequences using blast searches and empirically defined thresholds. Used in `https://github.com/miferg/coiner`
 
