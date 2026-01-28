@@ -1,21 +1,12 @@
 # coiannot
 
-Assign taxonomy to cox1 sequences using blast searches and empirically defined thresholds. Recommended use after `https://github.com/miferg/coiner`
+Assign taxonomy to cox1 sequences using blast searches with empirically defined thresholds and sintax. Recommended use after [coiner](https://github.com/miferg/coiner) and [Darn](https://github.com/hariszaf/darn).
 
-After passing e-value and query coverage filters, for each rank, the identity percentage of blast alignment will define up to which rank annotation will be inherited from the subject sequence.
+After passing e-value and query coverage filters, for each rank, the identity percentage of blast alignment will define up to which rank annotation will be inherited from the subject sequence. Current thresholds are defined at the species and genus level.
 
-Percent identity threshold values were recovered after analyzing the full Midori2 database. Values calibrated with https://doi.org/10.1673/031.012.1601 (table 3). These represent the quantile 0.1 of all minimal pidents per taxa.
- 
-| Taxonomic Level | Value    |
-|-----------------|----------|
-| division        | 70.38    |
-| class           | 71.98    |
-| order           | 74.28    |
-| family          | 77.73    |
-| genus           | 83.12    |
-| species         | 95.00    |
+Percent identity threshold values at the genus level for each eukaryotic class were recovered after analyzing a dereplicated database built using the Midori2 and Ekoi databases. Sequences that present alignments with identity values below its corresponging threshold are then annotated using the sintax algorithm with a bootstrap cutoff of 0.8.
 
-# installation
+# Installation
 
 Pull the repository:
 
@@ -27,7 +18,7 @@ Set up and activate a conda environment with snakemake:
 
 All dependencies will be installed with conda when the pipeline runs for the first time.
 
-# usage
+# Usage
 
 Store all your fasta files in a same directory. Files must end with the ".fna" suffix.
 
